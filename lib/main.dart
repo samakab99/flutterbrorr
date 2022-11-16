@@ -10,9 +10,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
-// hva skjer
-
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -82,13 +79,12 @@ class _MyHomePageState extends State<MyHomePage> {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
 
-
         child: Column(
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
           // children horizontally, and tries to be as tall as its parent.
           //
-          // Invoke "debug painting" (press "p" in the console, choose the
+          // Invoke "debug painting" (plress "p" in the console, choose the
           // "Toggle Debug Paint" action from the Flutter Inspector in Android
           // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
           // to see the wireframe for each widget.
@@ -99,41 +95,30 @@ class _MyHomePageState extends State<MyHomePage> {
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
 
-
-
-
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-
-
-
-            Flexible (
-
-              flex: 2,
-              child:Container(
-
-                color: Colors.orangeAccent,
-
-
-
-
-              ),),
-            Expanded (
+            Expanded(
+                flex: 4,
+                child: FittedBox(
+                  alignment: Alignment.topLeft,
+                  fit: BoxFit.cover,
+                  child: Container(
+                    width: 300,
+                    color: Colors.orangeAccent,
+                    child: const Text("Bendik og Konstantin eller hv"),
+                  ),
+                )),
+            Expanded(
               flex: 3,
-
-              child:Container(
-
+              child: Container(
                 color: Colors.lightBlueAccent,
               ),
-
-
             ),
-
             const Text(
               'You have pushed the button this many times:',
             ),
             Text(
-              '${_counter*_counter}',
+              '${_counter * _counter}',
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
