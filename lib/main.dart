@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-
+// hva skjer
 
     return MaterialApp(
       title: 'Flutter Demo',
